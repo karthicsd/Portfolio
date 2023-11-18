@@ -70,7 +70,7 @@ const Page1 = () => {
             >
               <img
                 src={img}
-                className={`h-[25rem] sm:h-[30rem]  p-5 ${
+                className={`h-[23rem] sm:h-[28rem]  p-5 ${
                   !icon && 532 >= wid <= 640 ? "h-[20rem] sm:mb-0" : ""
                 }
                 
