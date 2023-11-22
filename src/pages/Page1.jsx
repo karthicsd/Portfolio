@@ -1,20 +1,36 @@
 import { IoMenuSharp } from "react-icons/io5";
 import { GrClose } from "react-icons/gr";
-import { useState } from "react";
-// import Page2 from "./Page2";
+import { useState, useRef } from "react";
+import Page3 from "./Page3";
+import Page2 from "./Page2";
+import Page4 from "./Page4";
 const Page1 = () => {
+  const scollToRef0 = useRef();
+  const scollToRef1 = useRef();
+  const scollToRef2 = useRef();
+  const scollToRef3 = useRef();
+  const scrollToIndex = (index) => {
+    if (index === 0) scollToRef0.current.scrollIntoView({ behavior: "smooth" });
+    else if (index === 1)
+      scollToRef2.current.scrollIntoView({ behavior: "smooth" });
+    else if (index === 2)
+      scollToRef3.current.scrollIntoView({ behavior: "smooth" });
+    else if (index === 3)
+      scollToRef1.current.scrollIntoView({ behavior: "smooth" });
+  };
   let links = [
     { name: "HOME", link: "/" },
     { name: "PROJECT", link: "/" },
-    { name: "ABOUT", link: "/" },
+    // { name: "ABOUT", link: "/" },
     { name: "CONTACT", link: "/" },
-    { name: "OTHER PAGE", link: "/ " },
+    { name: "SKILLS", link: "/ " },
   ];
   let wid = screen.width;
   let [icon, setIcon] = useState(true);
   return (
     <>
       <div
+        ref={scollToRef0}
         className={`  w-screen 1sm:h-[100vh] ${icon ? "" : "1sm:h-[150vh]"} ${
           icon && wid >= 532 ? "" : "1sm:h-[135vh] "
         } ${icon && wid >= 640 ? "" : "1sm:h-[98.5vh]"}`}
@@ -52,7 +68,13 @@ const Page1 = () => {
                   key={index}
                   className="mt-5 text-center shadow-sm shadow-white active:shadow-red-600  1sm:left-0 1sm:mt-0 1sm:shadow-none "
                 >
-                  <a src={e.link}>{e.name}</a>
+                  <a
+                    onClick={() => {
+                      scrollToIndex(index);
+                    }}
+                  >
+                    {e.name}
+                  </a>
                 </li>
               ))}
             </ul>
@@ -106,6 +128,15 @@ const Page1 = () => {
             </div>
           </div>
         </body>
+      </div>
+      <div ref={scollToRef1}>
+        <Page2 />
+      </div>
+      <div ref={scollToRef2}>
+        <Page3 />
+      </div>
+      <div ref={scollToRef3}>
+        <Page4 />
       </div>
     </>
   );
