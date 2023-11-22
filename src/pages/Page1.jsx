@@ -1,6 +1,7 @@
 import { IoMenuSharp } from "react-icons/io5";
 import { GrClose } from "react-icons/gr";
 import { useState, useRef } from "react";
+import me from "../assets/me.jpg";
 import Page3 from "./Page3";
 import Page2 from "./Page2";
 import Page4 from "./Page4";
@@ -90,7 +91,7 @@ const Page1 = () => {
               }${icon && 532 > wid <= 640 ? "" : ""}`}
             >
               <img
-                src="https://images.pexels.com/photos/5721172/pexels-photo-5721172.jpeg"
+                src={me}
                 className={`h-[23rem] sm:h-[28rem]  p-5 ${
                   !icon && 532 >= wid <= 640 ? "h-[20rem] sm:mb-0" : ""
                 }
