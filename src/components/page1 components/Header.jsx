@@ -20,7 +20,7 @@ function Header() {
           </li>
         </div>
         <li className=" h-10 w-24 flex justify-center items-center hover:bg-white hover:text-black hover:rounded-3xl hover:transition hover:ease-in-out hover:delay-150 ">
-          Portfolio
+          Project
         </li>
         <li className=" h-10 w-24 flex justify-center items-center hover:bg-white hover:text-black hover:rounded-3xl hover:transition hover:ease-in-out hover:delay-150 ">
           Blog
