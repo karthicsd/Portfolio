@@ -1,4 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
+import arrow from "../../../public/arrow_outward_40dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png";
 function Body() {
   return (
     <div className=" min-h-[31rem]  w-full flex flex-wrap items-centerm gap-10 justify-around p-14">
@@ -35,11 +36,7 @@ function Body() {
           <div className=" h-28 w-28 bg-indigo-800 border-[0.8rem] border-white rounded-full flex justify-center items-center">
             {/* arrow */}
             <div className="w-14 h-14 ">
-              <img
-                src="/Portfolio/src/assets/arrow_outward_40dp_FFFFFF_FILL0_wght400_GRAD0_opsz40.png"
-                alt=""
-                className=" "
-              />
+              <img src={arrow} alt="" className=" " />
             </div>
           </div>
         </div>

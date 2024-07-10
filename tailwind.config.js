@@ -5,7 +5,7 @@ export default {
     extend: {
       backgroundImage: {
         "my-image":
-          "url('/Portfolio/src/assets/WhatsApp Image 2024-05-30 at 17.18.24_67c9501bb.jpg')",
+          "url('/WhatsApp Image 2024-05-30 at 17.18.24_67c9501bb.jpg')",
       },
       fontFamily: {
         myName: ["Lexend", "sans-serif"],
