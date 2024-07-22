@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      screens: {
+        mini: "590px",
+      },
       backgroundImage: {
         "my-image":
           "url('/WhatsApp Image 2024-05-30 at 17.18.24_67c9501bb.jpg')",
